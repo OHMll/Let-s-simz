@@ -28,7 +28,7 @@ function Home() {
     const images = [
       <video
         key="Step1-video"
-        src="/videos/Step1.mp4" // ใส่ path ของวิดีโอที่ต้องการ
+        src={`${import.meta.env.BASE_URL}videos/Step1.mp4`} // ใส่ path ของวิดีโอที่ต้องการ
         className="w-full h-full object-fit rounded-lg"
         autoPlay
         loop
@@ -36,7 +36,7 @@ function Home() {
       />,
       <video
         key="Step2-video"
-        src="/videos/Step2.mp4" // ใส่ path ของวิดีโอที่ต้องการ
+        src={`${import.meta.env.BASE_URL}videos/Step2.mp4`} // ใส่ path ของวิดีโอที่ต้องการ
         className="w-full h-full object-fit rounded-lg"
         autoPlay
         loop
@@ -44,7 +44,7 @@ function Home() {
       />,
       <video
         key="Step3-video"
-        src="/videos/Step3.mp4" // ใส่ path ของวิดีโอที่ต้องการ
+        src={`${import.meta.env.BASE_URL}videos/Step3.mp4`} // ใส่ path ของวิดีโอที่ต้องการ
         className="w-full h-full object-fit rounded-lg"
         autoPlay
         loop
