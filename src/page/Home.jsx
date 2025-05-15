@@ -2,9 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Elephant from "../img/elephants-nature.jpg";
-import Cat1 from "../img/little-cat-sitting-grass.jpg";
-import Cat2 from "../img/pets-beautiful-house-animal-gray.jpg";
 
 function Home() {
   const navigate = useNavigate();
@@ -31,7 +28,7 @@ function Home() {
     const images = [
       <video
         key="Step1-video"
-        src="./src/img/Step1.mp4" // ใส่ path ของวิดีโอที่ต้องการ
+        src="/videos/Step1.mp4" // ใส่ path ของวิดีโอที่ต้องการ
         className="w-full h-full object-fit rounded-lg"
         autoPlay
         loop
@@ -39,7 +36,7 @@ function Home() {
       />,
       <video
         key="Step2-video"
-        src="./src/img/Step2.mp4" // ใส่ path ของวิดีโอที่ต้องการ
+        src="/videos/Step2.mp4" // ใส่ path ของวิดีโอที่ต้องการ
         className="w-full h-full object-fit rounded-lg"
         autoPlay
         loop
@@ -47,7 +44,7 @@ function Home() {
       />,
       <video
         key="Step3-video"
-        src="./src/img/Step3.mp4" // ใส่ path ของวิดีโอที่ต้องการ
+        src="/videos/Step3.mp4" // ใส่ path ของวิดีโอที่ต้องการ
         className="w-full h-full object-fit rounded-lg"
         autoPlay
         loop
