@@ -61,7 +61,9 @@ function Simulator() {
         </div>
       </div>
 
+
       <div className="flex-1 sm:h-[65%] mt-4 sm:mt-0 overflow-y-auto">
+
         <Parameter selectedAlgo={selectedAlgo} />
       </div>
     </div>

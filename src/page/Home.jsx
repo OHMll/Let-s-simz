@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import Step1 from "../img/Step1.jpg";
-import Step2 from "../img/Step2.jpg";
-import Step3 from "../img/Step3.png";
+import step1Video from '../img/Step1.mp4';
+import step2Video from '../img/Step2.mp4';
+import step3Video from '../img/Step3.mp4';
 
 function Home() {
   const navigate = useNavigate();
@@ -29,23 +29,29 @@ function Home() {
   // ส่วนของ IconSlider
   const IconSlider = () => {
     const images = [
-      <img
-        key="Step1"
-        src={Step1 || "/placeholder.svg"}
-        alt="Step1"
-        className="object-cover rounded-lg flex justify-center items-center object-fit"
+      <video
+        key="Step1-video"
+        src={step1Video} // ใส่ path ของวิดีโอที่ต้องการ
+        className="w-full h-full object-fit rounded-lg"
+        autoPlay
+        loop
+        muted
       />,
-      <img
-        key="Step2"
-        src={Step2 || "/placeholder.svg"}
-        alt="Step2"
-        className="object-cover rounded-lg flex justify-center items-center"
+      <video
+        key="Step2-video"
+        src={step2Video} // ใส่ path ของวิดีโอที่ต้องการ
+        className="w-full h-full object-fit rounded-lg"
+        autoPlay
+        loop
+        muted
       />,
-      <img
-        key="Step3"
-        src={Step3 || "/placeholder.svg"}
-        alt="Step3"
-        className="object-cover rounded-lg flex justify-center items-center"
+      <video
+        key="Step3-video"
+        src={step3Video} // ใส่ path ของวิดีโอที่ต้องการ
+        className="w-full h-full object-fit rounded-lg"
+        autoPlay
+        loop
+        muted
       />,
     ];
 
@@ -70,7 +76,7 @@ function Home() {
           }}
         >
           {images.map((image, index) => (
-            <div key={index} className="flex justify-center items-center flex-shrink-0 w-full h-full">
+            <div key={index} className="flex-shrink-0 w-full h-full">
               {image}
             </div>
           ))}
@@ -95,13 +101,13 @@ function Home() {
   return (
     <div className="container mx-auto mt-2 md:mt-5 pt-2 md:pt-5 px-4 md:px-5 lg:px-8 relative max-w-7xl">
       <h1 className="text-xl md:text-2xl lg:text-[26pt] font-bold text-center z-30 mb-4 md:mb-6 leading-relaxed">
-        Process Scheduling Simulation Platform for Operating Systems
+       Process Scheduling Simulation Platform for Operating Systems
       </h1>
 
       {/* ส่วนหลักของเนื้อหา - ปรับตัวตามขนาดหน้าจอ */}
       <div className="mt-4 md:mt-5 flex flex-col-reverse lg:flex-row lg:justify-between lg:items-stretch z-30 gap-6">
         {/* Steps Box - เต็มความกว้างบนมือถือ แต่ 50% บนจอใหญ่ */}
-        <div className="w-full lg:w-[48%] h-auto rounded-[1rem] bg-[#FFFFFF] shadow-md flex flex-col p-4 md:p-6 lg:p-8 justify-center">
+        <div className="w-full lg:w-[48%] h-auto rounded-[1rem] bg-[#FFFFFF] shadow-md flex flex-col p-4 md:p-6 lg:p-8 justify-center">         
           <div className="space-y-4 md:space-y-6 lg:space-y-8">
             <p className="text-base md:text-lg lg:text-xl py-2 md:py-3 transition ease-in-out delay-50 duration-500 hover:scale-105 hover:text-blue-500 flex items-center">
               <span>Step 1 : Choose process schedule</span>
@@ -109,16 +115,14 @@ function Home() {
             <p className="text-base md:text-lg lg:text-xl py-2 md:py-3 transition ease-in-out delay-50 duration-500 hover:scale-105 hover:text-blue-500 flex items-center">
               <span>Step 2 : Setting parameters</span>
             </p>
-            <p className="text-base md:text-lg lg:text-xl py-2 md:py-3 transition ease-in-out delay-50 duration-500 hover:scale-105 hover:text-blue-500 flex items-center">
-              <span>
-                Step 3 : Press " Start Simulation " button to simulate
-              </span>
+            <p className="text-base md:text-lg lg:text-xl py-2 md:py-3 transition ease-in-out delay-50 duration-500 hover:scale-105 hover:text-blue-500 flex items-center">              
+              <span>Step 3 : Press " Start Simulation " button to simulate</span>
             </p>
           </div>
         </div>
 
         {/* Image Slider - เต็มความกว้างบนมือถือ แต่ 50% บนจอใหญ่ */}
-        <div className=" w-full lg:w-[48%] h-[30vh] md:h-[40vh] lg:h-[50vh] relative z-10 mb-4 lg:mb-0">
+        <div className="w-full lg:w-[48%] h-[30vh] md:h-[40vh] lg:h-[50vh] relative z-10 mb-4 lg:mb-0">
           <IconSlider />
         </div>
       </div>
